@@ -18,14 +18,14 @@ public class Products {
         this.productName = productName;
         this.price = price;
         this.stock = stock;
-        generate_ID();
+        this.ID = generate_ID();
         value = (int) ((int)stock*price);
     }
 
-    private void generate_ID(){
+    private int generate_ID(){
         Random rand = new Random();
         int value = rand.nextInt((UPPERBOUND - LOWERBOUND +1))+ LOWERBOUND;
-        ID = value;
+        return value;
     }
 
     public String getProductName() {

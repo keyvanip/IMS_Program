@@ -4,15 +4,15 @@ import java.util.LinkedHashMap;
 
 
 public class Store {
-    private static LinkedHashMap<Integer, Products> store = new LinkedHashMap<Integer, Products>();
+    private  LinkedHashMap<Integer, Products> store = new LinkedHashMap<Integer, Products>();
 
 
-    public static void addProduct(int ID, Products description){
+    public void addProduct(int ID, Products description){
         store.put(ID,description);
 
     }
 
-    public static void modifyPrice(int ID, double newPrice){
+    public void modifyPrice(int ID, double newPrice){
         if (store.containsKey(ID)){
             store.get(ID).setPrice(newPrice);
             store.get(ID).resetValue();
@@ -22,7 +22,7 @@ public class Store {
         }
     }
 
-    public static void modifyName(int ID, String newName){
+    public void modifyName(int ID, String newName){
         if (store.containsKey(ID)){
             store.get(ID).setProductName(newName);
         }
@@ -32,7 +32,7 @@ public class Store {
     }
 
 
-    public static void addStock(int ID, int Stocks){
+    public void addStock(int ID, int Stocks){
         if (store.containsKey(ID)){
             store.get(ID).setStock(store.get(ID).getStock()+Stocks);
             store.get(ID).resetValue();
@@ -42,7 +42,7 @@ public class Store {
         }
     }
 
-    public static void resetStock(int ID, int newStock){
+    public void resetStock(int ID, int newStock){
         if (store.containsKey(ID)){
             store.get(ID).setStock(newStock);
             store.get(ID).resetValue();
@@ -52,7 +52,7 @@ public class Store {
         }
     }
 
-    public static void removeProduct(int ID){
+    public void removeProduct(int ID){
         if (store.containsKey(ID)){
             store.remove(ID);
         }
@@ -61,7 +61,7 @@ public class Store {
         }
     }
 
-    public static void sellProduct(int ID, int quantityToSell){
+    public void sellProduct(int ID, int quantityToSell){
         if (store.containsKey(ID)){
             int currentStock= store.get(ID).getStock();
             if(currentStock >= quantityToSell){
