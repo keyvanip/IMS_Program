@@ -1,6 +1,7 @@
 package com.parsakeyvani;
 
 import java.util.Random;
+import java.util.Vector;
 
 
 public class Products {
@@ -83,6 +84,16 @@ public class Products {
     public String toString(){
         String toReturn = "\nID:"+getId()+"\t Product:"+getProductName()+"\t    Price:" +"$"+getPrice()+"\t   Stock:"+getStock()+" units"+"\tStock-Value:$"+getValue()+"   \tSold:"+getNumSold()+" units"+ "\tRevenue:$"+ getRevenue()+"\n";
         return toReturn;
+    }
+
+    public Vector toVector(){
+      Vector row = new Vector();
+      row.add(this.getId());
+      row.add(this.getProductName());
+      row.add(this.getPrice());
+      row.add(this.getStock());  
+      
+      return row;
     }
 
 }

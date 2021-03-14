@@ -1,15 +1,29 @@
 package com.parsakeyvani;
 
 import java.util.LinkedHashMap;
-
+import java.util.Set;
+import java.util.Vector;
 
 public class Store {
     private  LinkedHashMap<Integer, Products> store = new LinkedHashMap<Integer, Products>();
 
+    public Vector vectorize(){
+        Vector storeVector = new Vector();
+       Set<Integer> myKeys = store.keySet();
+       for(int key : myKeys){
+            storeVector.add(store.get(key).toVector());
+       }
+       return storeVector;
+    }
 
     public void addProduct(int ID, Products description){
         store.put(ID,description);
 
+    }
+
+    public void addProduct(Products product){
+        int ID = product.getId();
+        store.put(ID, product);
     }
 
     public void modifyPrice(int ID, double newPrice){
