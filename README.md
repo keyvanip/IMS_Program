@@ -10,12 +10,23 @@ Running this program is simple. Pull the code from Github and run the main funct
   - Update Item - allows the user to update an entries properties (asside from the assigned ID number).
   
   ## Additional Backend Functionality
+  - caluculate total revenue
+  - sell products
+  - alternative functions for modifying entry attributes
   
   
   
   # Dependancies
   - reguires you have the Java SDK installed
     - Developed using Oracle Open JDK 15.0.1
+
+# Honor Code
+“As a student at Union College, I am part of a community that values intellectual effort, curiosity and discovery. I understand that in order to truly claim my educational and academic achievements, I am obligated to act with academic integrity. Therefore, I affirm that I will carry out my academic endeavors with full academic honesty, and I rely on my fellow students to do the same.”
+
+Signed, 
+Blake Luther, Ian Sulley, Parsa Keyvani
+3/14/21
+
   
 
 
