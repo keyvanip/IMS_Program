@@ -1,4 +1,4 @@
-# IMS Program
+# Inventory Management System (IMS)
 This project is an offline Inventory Management System, allowing items to be effiecntly, added, searched and edited. The implementation is entirely in Java, and uses the Java Swing Toolkit for its user interface.The Main functionality utilizes a LinkedHashMap for efficient add, remove, return, and update methods. The Gui Interfact uses Vectors for its JTable implementation. 
 
 # Start Guide
